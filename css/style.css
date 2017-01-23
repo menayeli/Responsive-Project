@@ -1,0 +1,341 @@
+/* ================================= 
+  Base Element Styles
+==================================== */
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Varela Round', sans-serif;
+	line-height: 1.6;
+	color: #3a3a3a;
+	background: #fafafa;
+}
+
+p {
+	font-size: .95em;
+	margin-bottom: 1.8em;
+}
+
+h2,
+h3,
+a {
+	color: #093a58;
+}
+
+h2,
+h3 {
+	margin-top: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+}
+
+.container{
+	width:100%;
+	padding: 0 3em;
+	}
+
+/* ================================= 
+  Base Layout Styles
+==================================== */
+
+/* ---- Navigation ---- */
+
+.name {
+	font-size: 1.25em;
+	margin: 0;
+	float: left;
+}
+
+.main-nav {
+	margin-top: 5px;
+	float: right;
+	width: 39%;
+}
+
+.name a,
+.main-nav a {
+	text-align: center;
+	display: block;
+	padding: 10px 15px;
+}
+
+.main-nav a {
+	font-size: .95em;
+	color: #4a4a4a;
+	text-transform: uppercase;
+}
+
+.main-nav a:hover {
+	color: #093a58;
+}
+
+
+/* ---- Footer ---- */
+
+.name-footer {
+	font-size: 1.25em;
+	margin: 0;
+	float: left;
+	width: 35%;
+}
+
+.main-nav-footer {
+	margin-top: 5px;
+	float: right;
+	width: 65%;
+	padding-left: 20%;
+}
+
+
+.main-nav-footer li {
+		display: inline-block;
+}
+
+.name-footer a,
+.main-nav-footer a {
+	text-align: center;
+	display: block;
+	padding: 10px 15px;
+}
+
+.main-nav-footer a {
+	font-size: .95em;
+	color: #4a4a4a;
+	text-transform: uppercase;
+}
+
+.main-nav-footer a:hover {
+	color: #093a58;
+}
+
+/* ---- Layout Containers ---- */
+
+.main-header {
+	padding-top: .5em;
+	padding-bottom: .5em;
+}
+
+.one-column{
+	float: right;
+	width: 47%;	
+
+}
+
+.one-column {
+		width: 34%;
+	}
+
+.two-column{
+	float: left;
+	width: 50%;
+}
+
+.title{
+	text-align: center;
+	text-transform: uppercase;
+	padding: 1em 0;
+}
+
+.portfolio{
+	background: #fff;
+	margin-top: 15px!important; 
+}
+
+.primary, .secondary, .tertiary {  
+		width: 33%;
+		float: left
+	}
+
+
+.description{
+	text-align: center;
+	padding-top:1em; 
+}
+
+.col {
+	padding-right: 1em;
+	padding-left: 1em;
+}
+
+.main-footer {
+	
+}
+
+.main-footer {
+	background: #fff;
+	padding: 2em 0;
+	margin-top: 30px;
+}
+
+.contact-info{
+	text-align: center;
+    padding: 0 19%;
+}
+
+.mobileonly{
+	display: none;
+}
+
+/* ---- Page Elements ---- */
+
+.logo {
+	width: 190px;
+}
+
+.headline {
+	margin-bottom: 0;
+}
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+@media (min-width:320px) and (max-width: 767px){
+	.container {
+	    width: 100%;
+	    padding: 0 1em;
+	}
+
+	.name{
+    	display: inline;
+    	text-align: center;
+    	width: 100%;
+	}
+
+	.main-nav {
+		margin-top: 0px;
+	    float: right;
+	    width: 100%;
+	}
+
+	.main-nav li {
+	    display: inline-block;
+	    margin-left: 0 !important;
+	    text-align: center;
+	    width: 100%;
+	    background: white;
+	    margin: 4px 0;
+	}
+
+	.one-column {
+    	width: 100%;
+	}
+
+	.two-column {
+		width: 100%;
+	}
+
+	.primary,
+	.secondary,
+	.tertiary{
+		width: 100%!important;
+		float: left;
+	}
+
+	.main-nav-footer{
+		display: none;
+	}
+
+	.name-footer {
+    font-size: .8em;
+	}
+
+	.name-footer a, .main-nav-footer a {
+	    text-align: left;
+	    display: block;
+	    padding: 0;
+	}
+
+	.mobileonly{
+		display: block;
+		font-size: .9em;
+    	float: right;
+	}
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px){
+
+	.container {
+		width: 90%;
+		margin: 0 auto;
+		padding: 0;
+	}
+
+	.name{
+	float: left;
+	width: 100%;
+	text-align: center;
+	}
+
+	.one-column {
+    width: 50%;
+	}
+
+	.two-column {
+    width: 50%;
+	}
+
+	.primary,
+	.secondary,
+	.tertiary{
+		width: 50%!important;
+		float: left;
+	}
+
+	.main-nav {
+	width: 100%;
+    text-align: center;
+}
+	}
+
+	.main-nav li {
+		display: inline-block;
+		margin-left: 15px;
+	}
+
+	.tagline {
+		font-size: 1.4em;
+	}
+
+	/* ---- Float clearfix ---- */
+
+	.clearfix::after {
+		content: " ";
+		display: table;
+		clear: both;
+	}
+
+}
+
+@media (min-width: 1024px){
+
+	.container {
+		width:80%;
+		max-width:1150px!important;
+	}
+	
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
