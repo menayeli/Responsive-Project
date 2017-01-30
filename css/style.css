@@ -42,6 +42,9 @@ img {
 	padding: 0 3em;
 	}
 
+.main-header{
+	background-color: #fafafa;
+}
 /* ================================= 
   Base Layout Styles
 ==================================== */
@@ -54,17 +57,19 @@ img {
 	float: left;
 }
 
+.name{
+    	width: 100%;
+}
+
 .main-nav {
 	margin-top: 5px;
-	float: right;
-	width: 39%;
 }
 
 .name a,
 .main-nav a {
 	text-align: center;
 	display: block;
-	padding: 10px 15px;
+	padding: 10px 0px;
 }
 
 .main-nav a {
@@ -78,50 +83,10 @@ img {
 }
 
 
-/* ---- Footer ---- */
-
-.name-footer {
-	font-size: 1.25em;
-	margin: 0;
-	float: left;
-	width: 35%;
-}
-
-.main-nav-footer {
-	margin-top: 5px;
-	float: right;
-	width: 65%;
-	padding-left: 20%;
-}
-
-
-.main-nav-footer li {
-		display: inline-block;
-}
-
-.name-footer a,
-.main-nav-footer a {
-	text-align: center;
-	display: block;
-	padding: 10px 15px;
-}
-
-.main-nav-footer a {
-	font-size: .95em;
-	color: #4a4a4a;
-	text-transform: uppercase;
-}
-
-.main-nav-footer a:hover {
-	color: #093a58;
-}
 
 /* ---- Layout Containers ---- */
 
-.main-header {
-	padding-top: .5em;
-	padding-bottom: .5em;
-}
+
 
 .one-column{
 	float: right;
@@ -165,9 +130,6 @@ img {
 	padding-left: 1em;
 }
 
-.main-footer {
-	
-}
 
 .main-footer {
 	background: #fff;
@@ -180,9 +142,7 @@ img {
     padding: 0 19%;
 }
 
-.mobileonly{
-	display: none;
-}
+
 
 /* ---- Page Elements ---- */
 
@@ -194,36 +154,11 @@ img {
 	margin-bottom: 0;
 }
 
-/* ================================= 
-  Media Queries
-==================================== */
-
-@media (min-width:320px) and (max-width: 767px){
 	.container {
 	    width: 100%;
 	    padding: 0 1em;
 	}
 
-	.name{
-    	display: inline;
-    	text-align: center;
-    	width: 100%;
-	}
-
-	.main-nav {
-		margin-top: 0px;
-	    float: right;
-	    width: 100%;
-	}
-
-	.main-nav li {
-	    display: inline-block;
-	    margin-left: 0 !important;
-	    text-align: center;
-	    width: 100%;
-	    background: white;
-	    margin: 4px 0;
-	}
 
 	.one-column {
     	width: 100%;
@@ -240,29 +175,39 @@ img {
 		float: left;
 	}
 
-	.main-nav-footer{
-		display: none;
-	}
+	
 
-	.name-footer {
+
+.name-footer {
     font-size: .8em;
-	}
-
-	.name-footer a, .main-nav-footer a {
-	    text-align: left;
-	    display: block;
-	    padding: 0;
-	}
-
-	.mobileonly{
-		display: block;
-		font-size: .9em;
-    	float: right;
-	}
+    width: 55%;
+    display: inline-block;
+    float: left;
 }
 
+.mobileonly{
+	display: block;
+	font-size: .9em;
+    float: right;
+}
 
-@media (min-width: 768px) and (max-width: 1024px){
+.main-nav-footer{
+	display: none
+}
+
+/* ---- Float clearfix ---- */
+
+.clearfix::after {
+		content: " ";
+		display: table;
+		clear: both;
+}
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+@media (min-width: 768px) {
 
 	.container {
 		width: 90%;
@@ -272,9 +217,20 @@ img {
 
 	.name{
 	float: left;
-	width: 100%;
-	text-align: center;
+	width: 27%;
 	}
+
+	.main-nav {
+	float: right;	
+    padding-right: 19px;
+
+	}
+
+	.main-nav li {
+    display: inline-block;
+    margin-left: 15px;
+	}
+
 
 	.one-column {
     width: 50%;
@@ -291,27 +247,30 @@ img {
 		float: left;
 	}
 
-	.main-nav {
-	width: 100%;
-    text-align: center;
-}
-	}
-
-	.main-nav li {
-		display: inline-block;
-		margin-left: 15px;
-	}
-
 	.tagline {
 		font-size: 1.4em;
 	}
 
-	/* ---- Float clearfix ---- */
 
-	.clearfix::after {
-		content: " ";
-		display: table;
-		clear: both;
+
+	.name-footer a, .main-nav-footer a {
+	    text-align: left;
+	    display: block;
+	    padding: 0;
+	}
+
+	.mobileonly{
+	display: none;
+	}
+
+	.main-nav-footer{
+	display: inline-block;
+	float: right;
+	}
+
+	.main-nav-footer li {
+    display: inline-block;
+    margin-right: 10px;
 	}
 
 }
@@ -321,6 +280,10 @@ img {
 	.container {
 		width:80%;
 		max-width:1150px!important;
+	}
+
+	.primary, .secondary, .tertiary {
+    width: 30%!important;
 	}
 	
 
